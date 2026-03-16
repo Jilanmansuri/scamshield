@@ -8,12 +8,25 @@ const ReportScam = () => {
   const [formData, setFormData] = useState({
     identifier: '',
     scamType: '',
-    description: ''
+    description: '',
+    city: ''
   });
   const [status, setStatus] = useState({ type: '', message: '' }); // 'success' or 'error'
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   const navigate = useNavigate();
+
+  const indianCities = [
+    { name: 'Delhi', lat: 28.6139, lng: 77.2090 },
+    { name: 'Mumbai', lat: 19.0760, lng: 72.8777 },
+    { name: 'Bangalore', lat: 12.9716, lng: 77.5946 },
+    { name: 'Hyderabad', lat: 17.3850, lng: 78.4867 },
+    { name: 'Chennai', lat: 13.0827, lng: 80.2707 },
+    { name: 'Kolkata', lat: 22.5726, lng: 88.3639 },
+    { name: 'Pune', lat: 18.5204, lng: 73.8567 },
+    { name: 'Ahmedabad', lat: 23.0225, lng: 72.5714 },
+    { name: 'Other', lat: 20.5937, lng: 78.9629 }
+  ];
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,21 +39,31 @@ const ReportScam = () => {
 
     try {
       const token = localStorage.getItem('token');
-      // If no token exists, the user isn't properly authenticated but UI showed the page
       if (!token) {
         setStatus({ type: 'error', message: 'You must be logged in to report a scam' });
         setTimeout(() => navigate('/login'), 2000);
         return;
       }
 
-      const response = await axios.post('/api/scams', formData, {
+      const selectedCity = indianCities.find(c => c.name === formData.city) || indianCities[indianCities.length - 1];
+      
+      const payload = {
+        ...formData,
+        location: {
+          city: selectedCity.name,
+          lat: selectedCity.lat,
+          lng: selectedCity.lng
+        }
+      };
+
+      await axios.post('/api/scams', payload, {
         headers: {
           Authorization: `Bearer ${token}`
         }
       });
 
       setStatus({ type: 'success', message: 'Scam report submitted successfully! Thank you for protecting the community.' });
-      setFormData({ identifier: '', scamType: '', description: '' });
+      setFormData({ identifier: '', scamType: '', description: '', city: '' });
       
     } catch (error) {
       console.error('Error submitting report:', error);
@@ -122,6 +145,24 @@ const ReportScam = () => {
                 <option value="Phishing">Phishing Link / Website</option>
                 <option value="Fake Job">Fake Job Offer</option>
                 <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="city" className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                City <span className="text-danger-500">*</span>
+              </label>
+              <select
+                id="city"
+                name="city"
+                required
+                value={formData.city}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all appearance-none"
+                style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundPosition: `right 1rem center`, backgroundRepeat: `no-repeat`, backgroundSize: `1.5em 1.5em`, paddingRight: `3rem` }}
+              >
+                <option value="" disabled>Select City</option>
+                {indianCities.map(c => <option key={c.name} value={c.name}>{c.name}</option>)}
               </select>
             </div>
 
