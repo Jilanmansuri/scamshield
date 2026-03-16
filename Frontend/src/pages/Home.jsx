@@ -114,13 +114,13 @@ const Home = () => {
             if (debouncedSearch) {
                 // Remove spaces/hyphens for checking
                 const cleanSearch = debouncedSearch.replace(/[\s-]/g, '');
-                // Check if it's a 10-digit number starting with 1, 2, 3, or 4
-                if (/^[1-4]\d{9}$/.test(cleanSearch) || /^\+91[1-4]\d{9}$/.test(cleanSearch)) {
+                // Check if it's a 10-digit number starting with 1, 2, 3, 4, or 5
+                if (/^[1-5]\d{9}$/.test(cleanSearch) || /^\+91[1-5]\d{9}$/.test(cleanSearch)) {
                     autoWarningScam.push({
                         _id: `auto_warning_${cleanSearch}`,
                         identifier: debouncedSearch,
                         scamType: 'OTP Scam',
-                        description: `⚠️ HIGH RISK: Indian mobile numbers do NOT start with 1, 2, 3, or 4. This is highly likely a virtual VoIP number used by international scammers. Do NOT answer or share OTPs.`,
+                        description: `⚠️ HIGH RISK: Indian mobile numbers do NOT start with 1, 2, 3, 4, or 5. This is highly likely a virtual VoIP number used by international scammers. Do NOT answer or share OTPs.`,
                         createdAt: new Date().toISOString(),
                         reportedBy: { name: 'System Auto-Detect' },
                         confirmations: 99

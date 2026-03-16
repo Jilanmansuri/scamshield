@@ -24,6 +24,11 @@ const scamReportSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true,
+    },
+    location: {
+        city: { type: String, default: 'Unknown' },
+        lat: { type: Number },
+        lng: { type: Number }
     }
 }, { timestamps: true });
 
