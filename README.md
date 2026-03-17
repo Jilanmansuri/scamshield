@@ -1,102 +1,138 @@
-# 🛡️ ScamShield – Community Driven Fraud Detection Platform
+# 🛡️ ScamShield – Community Driven Fraud Detection Platform  
 
-## 📌 Problem Statement
-
-In today’s digital era, online fraud and scam activities are increasing rapidly through phone calls, phishing links, fake job offers, and fraudulent websites. Many individuals fall victim to financial loss and data theft because they do not have a quick and reliable way to verify whether a phone number, website, or payment ID has been previously reported as fraudulent.
-
-Currently, there is no simple and accessible platform where users can instantly check suspicious numbers or links before interacting with them.
-
-ScamShield aims to solve this problem by providing a centralized, community-driven platform where users can verify and report scams, helping others stay protected from digital fraud.
-
----
-
-## 💡 Proposed Solution
-
-ScamShield is a full-stack web application that allows users to search suspicious phone numbers, website URLs, or payment IDs to check if they have been reported as scams.
-
-The platform maintains a shared database of reported scam activities. Users can also contribute by submitting new scam reports, creating a collaborative system that helps identify and prevent fraudulent activities.
-
-By combining community reporting with efficient search and filtering features, ScamShield helps users make safer online decisions.
+<p align="center">
+  <a href="https://scamshield-xjip.vercel.app/">
+    <img src="https://img.shields.io/badge/Live%20Frontend-Visit-blue?style=for-the-badge" />
+  </a>
+  <a href="https://scamshield-2.onrender.com">
+    <img src="https://img.shields.io/badge/Backend-API-green?style=for-the-badge" />
+  </a>
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
+</p>
 
 ---
 
-## ⚙️ Key Features
+## 📌 Overview  
 
-### 🔍 Scam Verification
-Users can search for suspicious phone numbers, URLs, or UPI IDs to check if they have been reported as scams.
+Online scams are growing rapidly — phishing links, fake job offers, UPI fraud, and spam calls are everywhere.  
 
-### 📝 Community Reporting
-Registered users can report scam numbers or websites with details such as scam type and description.
+**ScamShield** is a community-driven platform that allows users to **verify suspicious phone numbers, URLs, and payment IDs instantly**.  
 
-### 📊 Scam Database
-The platform stores all reported scams in a centralized MongoDB database.
+It acts as a **centralized fraud detection system powered by real user reports**, helping people make safer decisions online.
 
-### 🔎 Search with Debouncing
-Search functionality is optimized using debouncing to reduce unnecessary API calls and improve performance.
+---
 
-### 📄 Pagination
-Large datasets of scam reports are handled efficiently using backend pagination.
+## ❗ Problem  
 
-### 🗂 Filtering & Sorting
-Users can filter reports based on scam categories such as:
+- 📈 Rapid increase in online fraud cases  
+- ❌ No quick way to verify suspicious contacts  
+- 🧠 Lack of awareness  
+- 💸 Financial and data loss  
+
+---
+
+## 💡 Solution  
+
+ScamShield provides:  
+
+- 🔍 Instant scam verification  
+- 📝 Community-based reporting  
+- 📊 Shared scam database  
+
+👉 Creating a **collaborative fraud prevention ecosystem**
+
+---
+
+## ⚙️ Features  
+
+### 🔍 Scam Verification  
+Search phone numbers, URLs, or UPI IDs to check reports.  
+
+### 📝 Community Reporting  
+Users can submit scam details with descriptions.  
+
+### 📊 Centralized Database  
+MongoDB stores all scam reports.  
+
+### ⚡ Debounced Search  
+Optimized search reduces unnecessary API calls.  
+
+### 📄 Pagination  
+Handles large datasets efficiently.  
+
+### 🗂 Filtering & Sorting  
+Filter by:
 - OTP Scam  
 - UPI Fraud  
-- Phishing Links  
+- Phishing  
 - Fake Job Offers  
 
-Reports can also be sorted by date or number of reports.
+Sort by:
+- Latest  
+- Most reported  
 
-### 🔐 User Authentication
-The application includes a secure authentication system allowing users to:
+### 🔐 Authentication  
 - Sign Up  
-- Log In  
-- Report Scams  
+- Login  
+- Secure reporting  
 
-### 🎨 Responsive UI
-The frontend is built using React and Tailwind CSS, ensuring a fully responsive design for mobile, tablet, and desktop devices.
+### 🎨 Responsive UI  
+Works on mobile, tablet, and desktop.  
 
-### 🌙 Dark / Light Mode
-Users can switch between dark and light themes for a better user experience.
+### 🌙 Dark / Light Mode  
+Better user experience with themes.  
 
 ---
 
-## 🛠 Tech Stack
+## 🛠 Tech Stack  
 
-### Frontend
+### Frontend  
 - React.js  
 - Tailwind CSS  
 - React Router  
 
-### Backend
+### Backend  
 - Node.js  
 - Express.js  
 
-### Database
+### Database  
 - MongoDB  
 
 ---
 
-## 📊 Database Overview
+## 🌐 Live Links  
 
-The platform stores scam reports in a structured database that includes:
-
-- Phone Number / URL / UPI ID  
-- Scam Type  
-- Description  
-- Number of Reports  
-- Reported By (User)
+- 🔗 Frontend: https://scamshield-xjip.vercel.app/  
+- 🔗 Backend: https://scamshield-2.onrender.com  
 
 ---
 
-## 🚀 Expected Impact
+## 📊 Database Structure  
 
-ScamShield helps users verify suspicious contacts and websites before interacting with them. By enabling community reporting and real-time verification, the platform promotes digital safety and awareness while reducing the risk of online fraud.
+Each scam report contains:  
+
+- 📞 Phone Number / URL / UPI ID  
+- 🏷 Scam Type  
+- 📝 Description  
+- 📈 Report Count  
+- 👤 Reported By  
 
 ---
 
-## 🔮 Future Improvements
+## 🚀 How It Works  
 
-- Integration with phishing detection APIs  
-- AI-based scam pattern detection  
-- Real-time fraud alerts  
-- Mobile application support  
+1. User searches suspicious data  
+2. Backend checks MongoDB  
+3. If found → shows scam reports  
+4. If not → user can report  
+5. Data becomes available for others  
+
+---
+
+## 💻 Run Locally  
+
+### 1️⃣ Clone Repository  
+
+```bash
+git clone https://github.com/your-username/scamshield.git
+cd scamshield
