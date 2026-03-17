@@ -4,10 +4,12 @@ ScamShield is a full-stack web application that detects potential scams using AI
 
 ---
 
-## 🌐 Live Demo
 
-* 🔗 Frontend: https://your-frontend-url.vercel.app
-* 🔗 Backend API: https://scamshield-1.onrender.com
+## 🌐 Live Demo  
+
+- 🔗 **Frontend**: https://scamshield-xjip.vercel.app/  
+- 🔗 **Backend API**: https://scamshield-2.onrender.com  
+- 🔗 **API Base**: https://scamshield-2.onrender.com/api  
 
 ---
 
