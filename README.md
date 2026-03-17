@@ -1,110 +1,234 @@
-# 🛡️ ScamShield — Community-Driven Fraud Detection Platform  
+# 🚀 ScamShield – AI Powered Scam Detection Platform
+
+ScamShield is a full-stack web application that detects potential scams using AI. It analyzes suspicious messages, links, or patterns and helps users stay safe online.
+
+---
+
+## 🌐 Live Demo
+
+* 🔗 Frontend: https://your-frontend-url.vercel.app
+* 🔗 Backend API: https://scamshield-1.onrender.com
+
+---
+
+
+## 📸 Screenshots  
 
 <p align="center">
-  <b>Verify. Report. Detect with AI.</b><br/>
-  A community-powered platform to detect and prevent online scams 🚨
+  <b>🏠 Home Page</b><br/>
+  <img src="https://res.cloudinary.com/doxsyif22/image/upload/v1773767801/Screenshot_2026-03-17_224017_xw8uev.png" width="90%" />
 </p>
 
 <p align="center">
-  <a href="https://scamshield-xjip.vercel.app/">
-    <img src="https://img.shields.io/badge/Frontend-Vercel-blue?style=for-the-badge&logo=vercel" />
-  </a>
-  <a href="https://scamshield-2.onrender.com">
-    <img src="https://img.shields.io/badge/Backend-Render-green?style=for-the-badge&logo=render" />
-  </a>
-  <img src="https://img.shields.io/badge/AI-Enabled-purple?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
+  <b>📊 Analytics Dashboard</b><br/>
+  <img src="https://res.cloudinary.com/doxsyif22/image/upload/v1773767801/Screenshot_2026-03-17_224110_rdaz8n.png" width="90%" />
 </p>
 
+<p align="center">
+  <b>🤖 AI Scam Finder</b><br/>
+  <img src="https://res.cloudinary.com/doxsyif22/image/upload/v1773767803/Screenshot_2026-03-17_224029_iulrx8.png" width="90%" />
+  
+</p>
 ---
 
-## 🌐 Live Demo  
+## 🧠 Features
 
-- 🔗 **Frontend**: https://scamshield-xjip.vercel.app/  
-- 🔗 **Backend API**: https://scamshield-2.onrender.com  
-- 🔗 **API Base**: https://scamshield-2.onrender.com/api  
-
----
-
-## 📌 Overview  
-
-**ScamShield** is a community-driven fraud detection platform that helps users verify suspicious **phone numbers, URLs, and UPI/payment IDs**.  
-
-It combines **community reports + AI analysis** to detect scams faster and more accurately.  
-
-> ⚡ A smart, crowdsourced + AI-powered fraud detection system  
+* 🤖 AI-based scam detection
+* 📊 Analytics dashboard
+* ⚡ Real-time API responses
+* 🔒 Secure backend with environment variables
+* 🌐 Full-stack deployment (Vercel + Render)
 
 ---
 
-## ❗ Problem  
+## 🏗️ Tech Stack
 
-- 📈 Rapid rise in online scams  
-- ❌ No instant verification system  
-- 🧠 Lack of awareness  
-- 💸 Financial and data loss  
+### Frontend
 
----
+* React (Vite)
+* Axios
+* Chart.js / Recharts (Analytics)
 
-## 💡 Solution  
+### Backend
 
-ScamShield provides:
+* Node.js
+* Express.js
+* CORS
+* Environment Variables
 
-- 🔍 Instant verification  
-- 📝 Community reporting  
-- 🤖 AI-based scam detection  
+### Deployment
 
-👉 Creating a **hybrid fraud detection system (Human + AI)**  
-
----
-
-## 🤖 AI Features  
-
-- 🧠 **AI Scam Analysis**  
-  Analyze suspicious messages, URLs, or descriptions using AI  
-
-- 🔎 **Pattern Detection**  
-  Identify scam patterns based on keywords and behavior  
-
-- ⚡ **Real-time Insights**  
-  AI provides quick risk evaluation  
-
-- 🧩 **Smart Assistance**  
-  Helps users understand whether something is likely a scam  
+* Frontend → Vercel
+* Backend → Render
 
 ---
 
-## ✨ Features  
+## 📁 Project Structure
 
-- 🔍 **Scam Verification**  
-- 📝 **Community Reporting**  
-- 🤖 **AI Scam Detection**  
-- 🔐 **Authentication (JWT)**  
-- 📊 **Analytics Dashboard**  
-- ⚡ **Debounced Search**  
-- 📄 **Pagination**  
-- 🗂 **Filtering & Sorting**  
-- 🌙 **Dark / Light Mode**  
-
----
-
-## 🧰 Tech Stack  
-
-### Frontend  
-- React (Vite)  
-- Tailwind CSS  
-- React Router  
-- Axios  
-
-### Backend  
-- Node.js  
-- Express.js  
-
-### Database  
-- MongoDB (Mongoose)  
-
-### AI Integration  
-- Gemini API (Google AI)  
+```
+ScamShield/
+│
+├── frontend/
+│   ├── src/
+│   ├── .env
+│   └── vite.config.js
+│
+├── backend/
+│   ├── server.js
+│   ├── routes/
+│   └── .env
+│
+└── README.md
+```
 
 ---
 
-## 📁 Project Structure  
+## ⚙️ Environment Variables
+
+### 📌 Frontend (.env)
+
+```
+VITE_API_URL=https://scamshield-1.onrender.com
+```
+
+---
+
+### 📌 Backend (.env)
+
+```
+PORT=10000
+FRONTEND_URL=https://your-frontend-url.vercel.app
+```
+
+---
+
+## 🔧 Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```
+git clone https://github.com/your-username/scamshield.git
+cd scamshield
+```
+
+---
+
+### 2️⃣ Backend Setup
+
+```
+cd backend
+npm install
+npm start
+```
+
+---
+
+### 3️⃣ Frontend Setup
+
+```
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## 🔌 API Usage
+
+### Example Request
+
+```
+GET /api/scams
+```
+
+### Axios Example
+
+```
+axios.get(`${import.meta.env.VITE_API_URL}/api/scams`)
+```
+
+---
+
+## 🚀 Deployment Guide
+
+### 🔹 Backend (Render)
+
+* Create new Web Service
+* Connect GitHub repo
+* Build Command:
+
+```
+npm install
+```
+
+* Start Command:
+
+```
+node server.js
+```
+
+---
+
+### 🔹 Frontend (Vercel)
+
+* Import GitHub repo
+* Add Environment Variable:
+
+```
+VITE_API_URL=https://scamshield-1.onrender.com
+```
+
+* Deploy
+
+---
+
+## ⚠️ Common Issues & Fixes
+
+### ❌ Backend not connecting
+
+* Ensure correct API URL in frontend
+* Redeploy frontend after updating `.env`
+* Check CORS settings in backend
+
+---
+
+### ❌ CORS Error
+
+Fix in backend:
+
+```
+app.use(cors({
+  origin: '*',
+  credentials: true
+}));
+```
+
+---
+
+## 📊 Future Improvements
+
+* 🔍 Advanced AI model integration
+* 📱 Mobile responsive UI improvements
+* 🔐 Authentication system
+* 📡 Real-time scam alerts
+
+---
+
+## 👨‍💻 Author
+
+**Jilan Mansuri**
+
+* 💼 Developer & Student
+* 🚀 Passionate about AI & Web Development
+
+---
+
+## 📜 License
+
+This project is open-source and available under the MIT License.
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
