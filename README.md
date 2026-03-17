@@ -12,7 +12,7 @@ ScamShield is a full-stack web application that detects potential scams using AI
 ---
 
 
-## 📸 Screenshots  
+
 ## 📸 Screenshots  
 
 <table align="center">
