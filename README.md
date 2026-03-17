@@ -1,31 +1,45 @@
-# 🛡️ ScamShield – Community Driven Fraud Detection Platform  
+# 🛡️ ScamShield — Community-Driven Fraud Detection Platform  
+
+<p align="center">
+  <b>Verify. Report. Detect with AI.</b><br/>
+  A community-powered platform to detect and prevent online scams 🚨
+</p>
 
 <p align="center">
   <a href="https://scamshield-xjip.vercel.app/">
-    <img src="https://img.shields.io/badge/Live%20Frontend-Visit-blue?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/Frontend-Vercel-blue?style=for-the-badge&logo=vercel" />
   </a>
   <a href="https://scamshield-2.onrender.com">
-    <img src="https://img.shields.io/badge/Backend-API-green?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/Backend-Render-green?style=for-the-badge&logo=render" />
   </a>
+  <img src="https://img.shields.io/badge/AI-Enabled-purple?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
 </p>
 
 ---
 
+## 🌐 Live Demo  
+
+- 🔗 **Frontend**: https://scamshield-xjip.vercel.app/  
+- 🔗 **Backend API**: https://scamshield-2.onrender.com  
+- 🔗 **API Base**: https://scamshield-2.onrender.com/api  
+
+---
+
 ## 📌 Overview  
 
-Online scams are growing rapidly — phishing links, fake job offers, UPI fraud, and spam calls are everywhere.  
+**ScamShield** is a community-driven fraud detection platform that helps users verify suspicious **phone numbers, URLs, and UPI/payment IDs**.  
 
-**ScamShield** is a community-driven platform that allows users to **verify suspicious phone numbers, URLs, and payment IDs instantly**.  
+It combines **community reports + AI analysis** to detect scams faster and more accurately.  
 
-It acts as a **centralized fraud detection system powered by real user reports**, helping people make safer decisions online.
+> ⚡ A smart, crowdsourced + AI-powered fraud detection system  
 
 ---
 
 ## ❗ Problem  
 
-- 📈 Rapid increase in online fraud cases  
-- ❌ No quick way to verify suspicious contacts  
+- 📈 Rapid rise in online scams  
+- ❌ No instant verification system  
 - 🧠 Lack of awareness  
 - 💸 Financial and data loss  
 
@@ -33,106 +47,64 @@ It acts as a **centralized fraud detection system powered by real user reports**
 
 ## 💡 Solution  
 
-ScamShield provides:  
+ScamShield provides:
 
-- 🔍 Instant scam verification  
-- 📝 Community-based reporting  
-- 📊 Shared scam database  
+- 🔍 Instant verification  
+- 📝 Community reporting  
+- 🤖 AI-based scam detection  
 
-👉 Creating a **collaborative fraud prevention ecosystem**
-
----
-
-## ⚙️ Features  
-
-### 🔍 Scam Verification  
-Search phone numbers, URLs, or UPI IDs to check reports.  
-
-### 📝 Community Reporting  
-Users can submit scam details with descriptions.  
-
-### 📊 Centralized Database  
-MongoDB stores all scam reports.  
-
-### ⚡ Debounced Search  
-Optimized search reduces unnecessary API calls.  
-
-### 📄 Pagination  
-Handles large datasets efficiently.  
-
-### 🗂 Filtering & Sorting  
-Filter by:
-- OTP Scam  
-- UPI Fraud  
-- Phishing  
-- Fake Job Offers  
-
-Sort by:
-- Latest  
-- Most reported  
-
-### 🔐 Authentication  
-- Sign Up  
-- Login  
-- Secure reporting  
-
-### 🎨 Responsive UI  
-Works on mobile, tablet, and desktop.  
-
-### 🌙 Dark / Light Mode  
-Better user experience with themes.  
+👉 Creating a **hybrid fraud detection system (Human + AI)**  
 
 ---
 
-## 🛠 Tech Stack  
+## 🤖 AI Features  
+
+- 🧠 **AI Scam Analysis**  
+  Analyze suspicious messages, URLs, or descriptions using AI  
+
+- 🔎 **Pattern Detection**  
+  Identify scam patterns based on keywords and behavior  
+
+- ⚡ **Real-time Insights**  
+  AI provides quick risk evaluation  
+
+- 🧩 **Smart Assistance**  
+  Helps users understand whether something is likely a scam  
+
+---
+
+## ✨ Features  
+
+- 🔍 **Scam Verification**  
+- 📝 **Community Reporting**  
+- 🤖 **AI Scam Detection**  
+- 🔐 **Authentication (JWT)**  
+- 📊 **Analytics Dashboard**  
+- ⚡ **Debounced Search**  
+- 📄 **Pagination**  
+- 🗂 **Filtering & Sorting**  
+- 🌙 **Dark / Light Mode**  
+
+---
+
+## 🧰 Tech Stack  
 
 ### Frontend  
-- React.js  
+- React (Vite)  
 - Tailwind CSS  
 - React Router  
+- Axios  
 
 ### Backend  
 - Node.js  
 - Express.js  
 
 ### Database  
-- MongoDB  
+- MongoDB (Mongoose)  
+
+### AI Integration  
+- Gemini API (Google AI)  
 
 ---
 
-## 🌐 Live Links  
-
-- 🔗 Frontend: https://scamshield-xjip.vercel.app/  
-- 🔗 Backend: https://scamshield-2.onrender.com  
-
----
-
-## 📊 Database Structure  
-
-Each scam report contains:  
-
-- 📞 Phone Number / URL / UPI ID  
-- 🏷 Scam Type  
-- 📝 Description  
-- 📈 Report Count  
-- 👤 Reported By  
-
----
-
-## 🚀 How It Works  
-
-1. User searches suspicious data  
-2. Backend checks MongoDB  
-3. If found → shows scam reports  
-4. If not → user can report  
-5. Data becomes available for others  
-
----
-
-## 💻 Run Locally  
-
-### 1️⃣ Clone Repository  
-
-```bash
-git clone https://github.com/your-username/scamshield.git
-cd scamshield
+## 📁 Project Structure  
