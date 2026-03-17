@@ -29,13 +29,10 @@ const limiter = rateLimit({
 app.use('/api/', limiter);
 
 // CORS Configuration
-const corsOptions = {
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-};
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: process.env.FRONTEND_URL || '*',
+  credentials: true
+}));
 
 app.use(express.json({ limit: '10kb' })); // Body parser with limit to prevent large payload attacks
 
