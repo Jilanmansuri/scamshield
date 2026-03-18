@@ -114,6 +114,8 @@ FRONTEND_URL=https://your-frontend-url.vercel.app
 
 ### 1️⃣ Clone the Repository
 
+fork this Repository
+
 ```
 git clone https://github.com/your-username/scamshield.git
 cd scamshield
@@ -190,37 +192,7 @@ VITE_API_URL=https://scamshield-1.onrender.com
 
 ---
 
-## ⚠️ Common Issues & Fixes
 
-### ❌ Backend not connecting
-
-* Ensure correct API URL in frontend
-* Redeploy frontend after updating `.env`
-* Check CORS settings in backend
-
----
-
-### ❌ CORS Error
-
-Fix in backend:
-
-```
-app.use(cors({
-  origin: '*',
-  credentials: true
-}));
-```
-
----
-
-## 📊 Future Improvements
-
-* 🔍 Advanced AI model integration
-* 📱 Mobile responsive UI improvements
-* 🔐 Authentication system
-* 📡 Real-time scam alerts
-
----
 
 ## 👨‍💻 Author
 
