@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import api from '../api/axios';
 import { AlertCircle, CheckCircle, HelpCircle, Loader2, History, ExternalLink, Search } from 'lucide-react';
+import { Helmet } from "react-helmet";
+
 
 const AIScamChecker = () => {
     const [input, setInput] = useState('');
@@ -108,6 +110,17 @@ const AIScamChecker = () => {
 
     return (
         <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+
+
+            <Helmet>
+                <title>Ai-Scam-Finder</title>
+                <meta
+                    name="description"
+                    content="Ai powered scam finder"
+                />
+            </Helmet>
+
+
             <div className="text-center space-y-4">
                 <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white flex items-center justify-center gap-3 tracking-tight">
                     <span className="bg-primary-600 text-white p-2 rounded-2xl shadow-lg shadow-primary-500/30">AI</span> Scam Finder

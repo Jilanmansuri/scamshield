@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../api/axios';
+import { Helmet } from "react-helmet";
+
 import {
     LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
     PieChart, Pie, Cell, Legend
@@ -40,6 +42,15 @@ const Analytics = () => {
 
     return (
         <div className="space-y-10 pb-12 animate-in fade-in duration-700">
+
+            <Helmet>
+                <title>Scam Analytics</title>
+                <meta
+                    name="description"
+                    content="scam Analytics"
+                />
+            </Helmet>
+
             {/* Header */}
             <div>
                 <h1 className="text-3xl lg:text-4xl font-black text-slate-900 dark:text-white tracking-tight">Scam Analytics</h1>
