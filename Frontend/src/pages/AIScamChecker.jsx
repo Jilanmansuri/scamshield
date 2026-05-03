@@ -113,10 +113,10 @@ const AIScamChecker = () => {
 
 
             <Helmet>
-                <title>Ai-Scam-Finder</title>
+                <title>AI Scam Finder | Analyze Links & Messages | ScamShield</title>
                 <meta
                     name="description"
-                    content="Ai powered scam finder"
+                    content="Use our advanced AI tool to analyze suspicious messages, emails, and links for potential fraud or phishing attempts. Instant scam detection powered by AI."
                 />
             </Helmet>
 

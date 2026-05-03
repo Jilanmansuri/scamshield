@@ -44,10 +44,10 @@ const Analytics = () => {
         <div className="space-y-10 pb-12 animate-in fade-in duration-700">
 
             <Helmet>
-                <title>Scam Analytics</title>
+                <title>Scam Analytics & Insights | Global Fraud Trends | ScamShield</title>
                 <meta
                     name="description"
-                    content="scam Analytics"
+                    content="Explore real-time analytics and data visualizations of scam patterns, fraud hotspots, and trending online threats reported by our community."
                 />
             </Helmet>
 

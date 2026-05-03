@@ -5,6 +5,7 @@ import Pagination from '../components/Pagination';
 import { Search, Filter, ShieldAlert, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { fakeScams } from '../data/fakeScams';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
     const [reports, setReports] = useState([]);
@@ -165,6 +166,10 @@ const Home = () => {
 
     return (
         <div className="space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-10">
+            <Helmet>
+                <title>ScamShield | Home - Latest Scam Reports & Protection</title>
+                <meta name="description" content="View the latest scam reports, search for suspicious numbers or URLs, and stay protected from online fraud with ScamShield." />
+            </Helmet>
 
             {/* Hero Section */}
             <section className="relative text-center py-16 px-4 md:px-8 rounded-[2.5rem] bg-gradient-to-br from-primary-600 to-indigo-800 text-white shadow-2xl overflow-hidden">
